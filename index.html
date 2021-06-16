@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+ 
+</head>
+<body class="">
+
+  <section>
+
+     <div class="name_switch">
+        <b class="name">calc</b>
+        <div class="theme_conn">
+          <span>THEME</span>
+          <div class="box">
+            <li>1  2  3</li>
+            <div class="switch_conn">
+              <li class="ball ball_1 active"></li>
+              <li class="ball ball_2"></li>
+              <li class="ball ball_3"></li>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <input type="text" placeholder="0" name="" class="screen">
+
+      <div class="keypad_conn">
+          <div class="keypad nom" onclick="getNumber(7)">7</div>
+          <div class="keypad nom" onclick="getNumber(8)">8</div>
+          <div class="keypad nom" onclick="getNumber(9)">9</div>
+
+          <div class="keypad special_one" onclick="del()">DEL</div>
+
+          <div class="keypad nom" onclick="getNumber(4)">4</div>
+          <div class="keypad nom" onclick="getNumber(5)">5</div>
+          <div class="keypad nom" onclick="getNumber(6)">6</div>
+
+          <div class="keypad nom" onclick="getOperand('+')">+</div>
+
+          <div class="keypad nom" onclick="getNumber(1)">1</div>
+          <div class="keypad nom" onclick="getNumber(2)">2</div>
+          <div class="keypad nom" onclick="getNumber(3)">3</div>
+
+          <div class="keypad nom" onclick="getOperand('-')">-</div>
+          <div class="keypad nom" onclick="getOperand('.')">.</div>
+
+          <div class="keypad nom" onclick="getNumber(0)">0</div>
+
+          <div class="keypad nom" onclick="getOperand('/')">/</div>
+          <div class="keypad nom" onclick="getOperand('x')">x</div>
+
+          <div class="keypad special_one reset">RESET</div>
+          <div class="keypad special_two" onclick="compute()">=</div>
+      </div>
+
+  </section>
+
+ 
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://mc-stephen.000webhostapp.com">mc-stephen</a>.
+  </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

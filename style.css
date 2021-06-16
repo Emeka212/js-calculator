@@ -1,0 +1,232 @@
+@import "https://fonts.google.com/specimen/Spartan";
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    /*background-image: linear-gradient(120deg, #102561, blue);*/
+    background-color: red;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-image: linear-gradient(120deg, blue, #102561);
+}
+*,
+*::after,
+*::before{
+	box-sizing: border-box;
+}
+li{list-style: none;}
+:root{
+	--main_background: hsl(222, 26%, 31%);
+	--toggle_keypad_background: hsl(223, 31%, 20%);
+	--screen_background: hsl(224, 36%, 15%);
+
+	--keypad_bg: #eae3db;
+
+	--nom_border_bottom: #b2a197;
+
+	--special2_bg: #d13f30;
+	--special2_border_bg: #96271c;
+	--special2_color: #ffffff;
+
+	--boxbg: #3e4555;
+
+	--txt_color: #ffffff;
+	--keypad_color: #3b424c;
+    
+    --special_bg: #647299;
+	--special_border_bottom: hsl(222, 36%, 41%);
+	--special_txt_color: #ffffff;
+}
+.theme_2{
+	--main_background: hsl(0, 0%, 90%);
+	--toggle_keypad_background: hsl(0, 5%, 81%);
+	--screen_background: hsl(0, 0%, 93%);
+
+	--keypad_bg: #e5e4e0;
+
+	--nom_border_bottom: #b2a197;
+
+	--special2_bg: #c85401;
+	--special2_border_bg: #873600;
+	--special2_color: #ffffff;
+
+	--boxbg: #999;
+
+	--txt_color: #35352d;
+	--keypad_color: #3b424c;
+    
+    --special_bg: #388187;
+	--special_border_bottom: #1a5d65;
+	--special_txt_color: #ffffff;
+}
+.theme_3{
+	
+	--main_background: hsl(268, 75%, 9%);
+	--toggle_keypad_background: hsl(268, 71%, 12%);
+	--screen_background: hsl(268, 71%, 12%);
+
+	--keypad_bg: #331b4d;
+
+	--nom_border_bottom: #7b2594;
+
+	--special2_bg: #00decf;
+	--special2_border_bg: #6cf8ef;
+	--special2_color: #002d34;
+
+	--boxbg: #3e4555;
+
+	--txt_color: #f2da3a;
+	--keypad_color: #f2da3a;
+    
+    --special_bg: #56077c;
+	--special_border_bottom: #bf16f5;
+	--special_txt_color: #ffffff;
+}
+
+
+body{
+	font-size: 13px;
+	font-family: "Spartan", sans-serif;
+	font-weight: 700;
+	background: var(--main_background);
+	color: var(--txt_color);
+	display: grid;
+	justify-content: center;
+	transition: 0.5s;
+}
+section{
+    width: 450px;
+    height: auto;
+    padding: 10px;
+    margin: 50px 0;
+}
+section .name_switch{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s;
+}
+section .name_switch .name{
+	font-size: 25px;
+}
+section .name_switch .theme_conn{
+	display: flex;
+	align-items: flex-end;
+}
+section .name_switch .theme_conn span{
+	margin: 0 20px 2px;
+	font-size: 12px;
+}
+section .name_switch .theme_conn .box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+section .name_switch .theme_conn .box li:first-child{
+	letter-spacing: 4px;
+}
+section .name_switch .theme_conn .box .switch_conn{
+	width: 60px;
+	border-radius: 50px;
+	display: flex;
+	padding: 3px;
+	align-items: center;
+	justify-content: space-around;
+	margin: 5px 0 0 -5px;
+	background: var(--toggle_keypad_background);
+}
+section .name_switch .theme_conn .box .switch_conn li.ball{
+	background: var(--boxbg);
+	width: 13px;
+	height: 13px;
+	border-radius: 50px;
+	cursor: pointer;
+}
+section .name_switch .theme_conn .box .switch_conn li.active{
+	background: var(--special2_bg);
+}
+
+section .screen{
+	width: 100%;
+	padding: 0 20px;
+	height: 100px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	margin: 20px 0;
+	font-size: 50px;
+	background: var(--screen_background);
+	transition: 0.2s;
+	text-align: right;
+	color: var(--txt_color);
+}
+section .keypad_conn{
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--toggle_keypad_background);
+	transition: 0.5s;
+}	
+
+section .keypad_conn .keypad{
+	width: 80px;
+	height: 50px;
+	margin: 10px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--keypad_color);
+	cursor: pointer;
+	font-size: 32px;
+	background: var(--keypad_bg);
+	border-bottom: 3px solid var(--nom_border_bottom);
+}
+section .keypad_conn .special_one{
+	font-size: 18px;
+	letter-spacing: 1px;
+	background: var(--special_bg);
+	border-bottom: 3px solid var(--special_border_bottom);
+	color: var(--special_txt_color);
+}
+section .keypad_conn .reset,
+section .keypad_conn .special_two{
+	width: 45%;
+}
+section .keypad_conn .special_two{
+	background: var(--special2_bg);
+	border-bottom: 3px solid var(--special2_border_bg);
+	color: var(--special2_color);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/*================================================
+Mobile width
+==================================================*/
+@media screen and (max-width: 450px){
+	section{
+		width: 100%;
+	}
+	section .keypad_conn{
+		padding: 10px 1.5%;
+	}	
+	section .keypad_conn .keypad{
+		width: 22%;
+		margin: 1.5%;
+	}
+	section .keypad_conn .reset,
+	section .keypad_conn .special_two{
+		width: 47%;
+	}
+}
